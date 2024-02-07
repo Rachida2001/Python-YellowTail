@@ -1,0 +1,54 @@
+
+Supplemental Lab 3
+Web Scraping Data for Sentiment Analysis
+Objective: Write a web scraping tool in Python that will
+retrieve movie reviews and store the content into a file
+which can be used for AI/ML sentiment analysis.
+Real World Scenario: You work for a company that specializes in Artificial Intelligence
+/Machine Learning (AI/ML). A production company has hired your company to
+provide sentiment analysis on the top movies produced. Using Natural Language
+Processing (NLP), the results will be highly useful to understand what makes a title
+successful and what makes a failure. Your task is to web scrape IMDB reviews which
+you will hand off to the data scientists.
+***Let’s assume that movie reviews database is not readily available.
+• Scrape "https://www.imdb.com/chart/top/?ref_=nv_mv_250"
+• Extract reviews
+• Save results in separate files per movie under a directory named Reviews
+***We will scrape the top 250 rated movies on the IMDB website.
+Tasks to script:
+Beautiful Soup - A Web Scraping Tool
+What is Web Scraping?
+Web scraping is the process of automatically extracting data from websites using software or scripting.
+The extracted data can be saved as a file on the local computer or in a database for further analysis or
+use.
+Web scraping is commonly used fo a variety of purposes, such as price comparison, data mining, and
+sentimental analysis.
+We will be utilizing Beautiful Soup which is a 3rd party Python library fo pulling data out of HTML and XML
+files. It aides in parsing out data and any useful information.
+I’ve heard of API (Application Programming Interface. What is the difference?
+Web Scraping and API are two different methods to extract data from a website.
+API, on the other hand, is a way for different software systems to communicate with each other. An API
+allows a developer to make specific requests for data, and the API will return the requested data in a
+structured format, such as JSON or XML. The API defines the rules for how to make those request and
+how the data will be returned.
+API is more preferred method extract data from a website as it can be more efficient and does not put as
+much strain on the website’s server.
+We will work with APIs in future labs but for this lesson we will have fun with some web scraping!
+Disclaimer:
+There are etiquette and ethics to follow when web scraping. Most websites will have a robots.txt page for
+its site which will show what data is permitted to be scraped. Just append /robots.txt to the domain name
+to retrieve that information ie for imdb.com it will be imdb.com/robots.txt.
+Before we start scripting
+Use Google Chrome or Firefox to Inspect Pages
+Let’s get an idea of section in HTML that we want to scrape. We will start
+navigating thru the various pages and right click on the area we want to
+extract and select Inspect. On the right hand side you will see the html tags,
+class, etc. The next few slides we will see how that may look like.
+Using Chrome or Firefox
+Breaking down the solution...
+In your browser right click the section you are interested in and right click.
+You should see an Inspect option. It will display the source code of the
+screen.
+Using Chrome or Firefox
+Breaking down the solution...
+This screen shot tells us that body contains the list of all the movies title.

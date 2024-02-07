@@ -1,0 +1,47 @@
+
+Supplemental Lab 2
+Hands on with file management and data manipulation
+Objective: Develop a python script that will open
+multiple files, read the file, manipulate the data, and
+write the modified data to a separate output file.
+Real World Scenario: You work for a bank that is rapidly growing and have been acquiring
+many other banks on a consistent basis. The bank is 3 acquisitions away from meeting
+this years fiscal goal and the fiscal year is coming to close very shortly. Part of the
+process to complete acquisitions is to get inventory into the banks database.
+Unfortunately not all banks use the same inventory tool and therefore the output they
+provide will have inconsistent field names, inconsistent value lengths, etc. Fortunately the
+one consistency is that all the files the acquired banks provide are CSV files. You have
+been tasked by your manager to consolidate these inventory reports into one single report
+so that you can load the data into the banks inventory database.
+Issues with inconsistent data: IP address field names are
+different, length of data, some IP address values have
+CIDR notation and some do not.
+• Load inventory reports provided by the different acquired banks.
+• Open the CSV files
+• Read the content of the files
+• Manipulate the data to be uniformed and structured to the enterprise bank
+database
+• Write the new results to an output file
+Tasks to script:
+Inventory CSVs
+Inventory
+Download inventory CSVs from Yellowtail Portal
+yellowtail_fcu.csv
+yellowtail_financial_services.csv
+yellowtail_national_bank.csv
+Import os and csv (built-in libraries)
+Breaking down the solution...
+#!/usr/bin/python
+Import os
+Import csv
+os will allow us to work with directory structure and files. csv will help simplify reading and writing a csv formatted
+file.
+Create a mapping with dictionary to standardize field names.
+# Keys are the standardized field name to be used in consolidated inventory
+# Values are the various field names found in the different inventory CSV profided by the acquired banks
+standardized_heaeder_mapping = {'Host Name' : ['Host Name', 'hostname', 'Name', 'Host'],
+'IP Address' : ['IP Address', 'IP', 'IPAddress'],
+'Department' : ['Department', 'Dept'],
+'OS' : ['OS', 'Operating System'],
+'Function' : ['Function']}
+Keys in this dictionary will be the standardized field name we will want to use for the final inventory CSV.
