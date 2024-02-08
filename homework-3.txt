@@ -1,0 +1,16 @@
+Part 1. Your Python program #1
+As part one of your homework, you are asked to write a program that will ask a user to
+enter an int number.
+If the number is 7 then the program should print "seven",
+If the number is 9 then the program should print "nine",
+If the number is 1 then the program should print "one",
+If the number is 10 then the program should print "ten",
+If the number is 5 then the program should print "five",
+Otherwise, your program should print "unknown number".
+
+Part 2. Your Python program #2
+As part two of your homework, you are asked to write a program that will ask a user to
+provide an input. Additionally, your program will try to handle the error that maybe occur when
+a user type in the any type but int. Your program should use try ... except ... else clause. Your
+function should print the result if the operation is successful, if the operation is not successful
+your program should print (Unpeacefully converted to integer).
